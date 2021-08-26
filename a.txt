@@ -1,0 +1,71 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+#include "CopyFile.h"
+using namespace std;
+
+class CopyFile{
+public:
+    void copyFiles(){
+        fstream myFile;
+        fstream archivores;
+        myFile.open("archivo.txt",ios::in);
+        archivores.open("archivo_resultado.txt",ios::out);
+        if(myFile.is_open())
+        {
+            string line;
+            while (getline(myFile,line,','))
+            {
+                archivores<<line;
+            }
+        }
+        myFile.close();
+        archivores.close();
+    }
+};
+
+
+
+void PagedArray::asig(int *arr,int numpages)
+{
+    archivo_res.open("C:\\Users\\Jose Pablo Ramos M\\CLionProjects\\Tarea 1 Jose Pablo Ramos\\archivo_resultado.txt",ios::in);
+    count=0;
+    numpages=numpages*30;
+    if(!archivo_res)
+    {
+        cout<<"Error";
+    }
+    while (getline(archivo_res,line,','))
+    {
+        count++;
+        if(count==10){
+            count=0;
+            while (!archivo_res.eof()){
+                archivo_res>>arr[count];
+                count++;
+                }
+        }
+    }
+    archivo_res.close();
+}
+
+
+void PagedArray::asig(int *arrays)
+{
+    archivo_res.open("C:\\Users\\Jose Pablo Ramos M\\CLionProjects\\Tarea 1 Jose Pablo Ramos\\archivo_resultado.txt",ios::in);
+    count=0;
+    int pos=0;
+    if(!archivo_res)
+    {
+        cout<<"Error";
+    }
+    while (getline(archivo_res,line,','))
+    {
+        count++;
+        if(count>50){
+            arrays[pos]=atoi(line.c_str());
+            pos++;
+        }
+    }
+    archivo_res.close();
+}
