@@ -1,9 +1,38 @@
-#include <iostream>
-#include <string>
-#include <fstream>
-#include "CopyFile.h"
-using namespace std;
+    //Hacemos el rewrite
+    //pagedArray.rewrite_file(pagedArray.pages);
+    //pagedArray.rewriteFile(pagedArray.pages1,6);
+    // FASE DOS Hacemos la segunda pagina
+    //PagedArray pagedArray1;
+    //pagedArray1.asig(pagedArray1.pages1,2,3);
+    //int a= sizeof(pagedArray1.pages1)/ sizeof(pagedArray1.pages1[0]);
+    //quickSort.quickSort(pagedArray1.pages1,0,a-1);
+    //quickSort.printArray(pagedArray1.pages1,a);
+    //pagedArray.asig(pagedArray.pages1,1);
+    //int a=sizeof(pagedArray.pages1)/sizeof(pagedArray.pages1[0]);
+    //quickSort.quickSort(pagedArray.pages1,0,a-1);
+    //quickSort.printArray(pagedArray.pages1,a);
+///
+/// \param arra
+//Meterle un array como parametro
+void PagedArray::store_results(int *arra) {
+    archivo_res.open("C:\\Users\\Jose Pablo Ramos M\\CLionProjects\\Tarea 1 Jose Pablo Ramos\\archivo_resultado.txt");
+    count=0;
+    if(!archivo_res){
+        cout<< "Error al abrir archivo";
+    }
+    while (!archivo_res.eof()){
 
+        archivo_res>>arra[count];
+        count++;
+    }
+    archivo_res.close();
+}
+
+
+
+
+
+***********************************************************************************
 class CopyFile{
 public:
     void copyFiles(){

@@ -1,5 +1,7 @@
 #include "CopyFile.h"
-
+#include <iostream>
+#include <limits>
+using namespace std;
 void CopyFile::CopiarFile()
 {
     myFile.open("C:\\Users\\Jose Pablo Ramos M\\CLionProjects\\Tarea 1 Jose Pablo Ramos\\archivo.txt",ios::in);
@@ -14,4 +16,5 @@ void CopyFile::CopiarFile()
     myFile.close();
     archivores.close();
 }
+
 

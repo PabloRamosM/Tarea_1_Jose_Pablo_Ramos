@@ -7,6 +7,8 @@
 
 #include <fstream>
 #include <string>
+#include <iostream>
+#include <limits>
 using namespace std;
 class CopyFile {
 public:
@@ -14,6 +16,7 @@ public:
     fstream archivores;
     string line;
     void CopiarFile();
+
 
 };
 

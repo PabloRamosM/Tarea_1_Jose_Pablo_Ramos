@@ -11,14 +11,17 @@ using namespace std;
 class PagedArray {
 public:
     fstream archivo_res;
-    int pages[10];
+    int pages0[10];
     int pages1[10];
-    int pagefull[2];
+    int pages2[10];
+    int pages3[10];
+    int pages4[10];
+    int pages5[10];
     int count;
     string line;
-    void store_results(int arr[]);
     void rewrite_file(int arr[]);
-    void asig(int arrrays[],int i,int x);
+    void rewriteFile(int arr[],int saltarlinea);
+    void asignPages(int a,int array[]);
     int &operator[](int position);
 };
 

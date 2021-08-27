@@ -4,23 +4,7 @@
 
 #include "PagedArray.h"
 #include <iostream>
-#include <sstream>
-///
-/// \param arra
-//Meterle un array como parametro
-void PagedArray::store_results(int *arra) {
-    archivo_res.open("C:\\Users\\Jose Pablo Ramos M\\CLionProjects\\Tarea 1 Jose Pablo Ramos\\archivo_resultado.txt");
-    count=0;
-    if(!archivo_res){
-        cout<< "Error al abrir archivo";
-    }
-    while (!archivo_res.eof()){
-
-        archivo_res>>arra[count];
-        count++;
-    }
-    archivo_res.close();
-}
+#include <limits>
 //Cambiar archivo
 /**
  *
@@ -38,8 +22,72 @@ void PagedArray::rewrite_file(int *arr)
     }
     archivo_res.close();
 }
-void PagedArray::asig(int *arrays,int i,int x) //Resolver problema de exit code
+//Falta parametro
+void PagedArray::asignPages(int a,int *array) {
+    archivo_res.open("C:\\Users\\Jose Pablo Ramos M\\CLionProjects\\Tarea 1 Jose Pablo Ramos\\archivo_resultado.txt",ios::in);
+    int contador=0;
+    int integer=20;
+    if(!archivo_res){
+        cout<< "Error";
+    }
+    for (int i = 0; i < a; ++i) {
+        archivo_res.ignore(integer,'\n');
+    }
+    while ( !archivo_res.eof() ){
+        archivo_res>>array[contador];
+        contador++;
+        if(contador==10){
+            archivo_res.close();
+            break;
+        }
+    }
+    archivo_res.close();
+}
+
+//No funciona
+void PagedArray::rewriteFile(int *arr,int saltarlinea){
+    archivo_res.open("C:\\Users\\Jose Pablo Ramos M\\CLionProjects\\Tarea 1 Jose Pablo Ramos\\archivo_resultado.txt");
+    int integer=20;
+    int contador=0;
+    if(!archivo_res){
+        cout<< "Error";
+    }
+    archivo_res.seekg(std::ios::beg);
+    for (int i = 0; i < saltarlinea-1; ++i) {
+        archivo_res.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+    }
+    for (int i = 0; i < 9; ++i) {
+        archivo_res<<to_string(arr[i]) +"\n";
+    }
+    archivo_res.close();
+}
+
+
+
+
+
+
+/*while (getline(archivo_res,line,'\n')){
+    line=to_string(arr[contador]);
+    archivo_res<<line+ "\n";
+    contador++;
+    if(contador==10){
+        archivo_res.close();
+        break;
+    }
+}*/
+
+
+
+
+
+
+
+/*void PagedArray::asig(int *arrays,int i,int x) //Resolver problema de exit code
 {
+     for (int i = 0; i < 10; ++i) {
+        archivo_res<<to_string(arr[i]);
+    }
     archivo_res.open("C:\\Users\\Jose Pablo Ramos M\\CLionProjects\\Tarea 1 Jose Pablo Ramos\\archivo_resultado.txt",ios::in);
     count=0;
     int pos=0;
@@ -63,12 +111,10 @@ void PagedArray::asig(int *arrays,int i,int x) //Resolver problema de exit code
         }
     }
     archivo_res.close();
-}
+}*/
+
 int &PagedArray::operator[](int position)
 {
 
-    pagefull[0]=*pages;
-    pagefull[1]=*pages1;
-    return pagefull[position];
 }
 
