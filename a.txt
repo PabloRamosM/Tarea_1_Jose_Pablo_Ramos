@@ -29,6 +29,51 @@ void PagedArray::store_results(int *arra) {
 }
 
 
+*while (getline(archivo_res,line,'\n')){
+    line=to_string(arr[contador]);
+    archivo_res<<line+ "\n";
+    contador++;
+    if(contador==10){
+        archivo_res.close();
+        break;
+    }
+}*/
+
+
+
+
+
+
+
+/*void PagedArray::asig(int *arrays,int i,int x) //Resolver problema de exit code
+{
+     for (int i = 0; i < 10; ++i) {
+        archivo_res<<to_string(arr[i]);
+    }
+    archivo_res.open("C:\\Users\\Jose Pablo Ramos M\\CLionProjects\\Tarea 1 Jose Pablo Ramos\\archivo_resultado.txt",ios::in);
+    count=0;
+    int pos=0;
+    int num=0;
+    if(!archivo_res)
+    {
+        cout<<"Error";
+    }
+    while (getline(archivo_res,line))
+    {
+        count++;
+        if(count>=(10*i) && count<=(10*x)){
+            if(pos>=10){
+                archivo_res.close();
+                break;
+            }
+            //num= atoi(line.c_str());
+            arrays[pos]= stoi(line);
+            //archivo_res>>arrays[pos];No hay diferencia entre uno y el otro
+            pos++;
+        }
+    }
+    archivo_res.close();
+}*/
 
 
 
