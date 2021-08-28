@@ -66,6 +66,7 @@ void PagedArray::rewriteFile(int *arr,int saltarlinea){
     }
     archivo_res.close();
 }
+
 // No se logro la sobrecarga del operador [] para efectos de la tarea
 int &PagedArray::operator[](int position)
 {
