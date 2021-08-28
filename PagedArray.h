@@ -42,7 +42,7 @@ public:
      *
      * @param a
      * @param array
-     * @brief Guarda las paginas del archivo en arrays de tamaña 256
+     * @brief Guarda las paginas del archivo en arrays de tamaño 256
      */
     void asignPages(int saltarLineas,int array[]);
     /**

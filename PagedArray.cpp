@@ -26,7 +26,7 @@ void PagedArray::rewrite_file(int *arr)
  *
  * @param saltarLineas
  * @param array
- * @brief Guarda las paginas del archivo en arrays de tamaña 256
+ * @brief Guarda las paginas del archivo en arrays de tamaño 256
  */
 void PagedArray::asignPages(int saltarLineas, int *array) {
     archivo_res.open("C:\\Users\\Jose Pablo Ramos M\\CLionProjects\\Tarea 1 Jose Pablo Ramos\\archivo_resultado.txt",ios::in);

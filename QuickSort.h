@@ -28,8 +28,8 @@ public:
      * @param high
      * @return
      * @brief El último elemento es el pivote, luego el pivote se coloca en
-     * la posiciíon correcta en el sorted array y después hace la partición
-     * de los elementos conforme si son mayores o menores que el array
+     * la posición correcta en el sorted array y después hace la partición
+     * de los elementos conforme si son mayores o menores que el pivote
      */
     int partition(int arr[],int low,int high);
     /**

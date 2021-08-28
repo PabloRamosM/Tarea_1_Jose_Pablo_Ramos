@@ -7,24 +7,30 @@
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_paged_array_abe2739de96aab70aaba4576e250b8b5b}{store\+\_\+results}} (int arr\mbox{[}$\,$\mbox{]})
-\item 
 void \mbox{\hyperlink{class_paged_array_ab975c3cdad43c3d0dc1194b99968564c}{rewrite\+\_\+file}} (int arr\mbox{[}$\,$\mbox{]})
-\item 
-void \mbox{\hyperlink{class_paged_array_a2dfcbe3d5a9d9c34826b11d79589fe33}{asig}} (int arrrays\mbox{[}$\,$\mbox{]}, int i, int x)
-\item 
+\begin{DoxyCompactList}\small\item\em Rescribe la primera pagina del archivo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_paged_array_a113ff7a86164e96f4b646a8bbe0590e0}{rewrite\+File}} (int arr\mbox{[}$\,$\mbox{]}, int saltarlinea)
+\begin{DoxyCompactList}\small\item\em Rescribe el archivo, pero no para efectos del programa no funciona. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_paged_array_ab729c12f0824e782af8e96c00ff71eec}{asign\+Pages}} (int saltar\+Lineas, int array\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Guarda las paginas del archivo en arrays de tamaño 256. \end{DoxyCompactList}\item 
 int \& \mbox{\hyperlink{class_paged_array_ad443f022316fd23de0367b012a2855ae}{operator\mbox{[}$\,$\mbox{]}}} (int position)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Sobrecargar el operador \mbox{[}\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 fstream \mbox{\hyperlink{class_paged_array_accc984edd07b3c0e13e4425e1ffde89f}{archivo\+\_\+res}}
 \item 
-int \mbox{\hyperlink{class_paged_array_a029bfc4804ba17b917317de22cccf0d8}{pages}} \mbox{[}10\mbox{]}
+int \mbox{\hyperlink{class_paged_array_aef2c51aba623ea165944b982793c3b1a}{pages0}} \mbox{[}10\mbox{]}
 \item 
 int \mbox{\hyperlink{class_paged_array_a3c14876d1a8258fcc3cfd5aba6295c58}{pages1}} \mbox{[}10\mbox{]}
 \item 
-int \mbox{\hyperlink{class_paged_array_adb1d53abb2a369977c22897e47c6e06d}{pagefull}} \mbox{[}2\mbox{]}
+int \mbox{\hyperlink{class_paged_array_afe9e17d5b5b6b0d353b855feb9a237b2}{pages2}} \mbox{[}10\mbox{]}
+\item 
+int \mbox{\hyperlink{class_paged_array_a50ba9514bf8fb69c83c37ec67bf40d00}{pages3}} \mbox{[}10\mbox{]}
+\item 
+int \mbox{\hyperlink{class_paged_array_a3186292b28f51137b3fac3c071048018}{pages4}} \mbox{[}10\mbox{]}
+\item 
+int \mbox{\hyperlink{class_paged_array_a2b132bf5751b258d5ed2dac22d7ba4d1}{pages5}} \mbox{[}10\mbox{]}
 \item 
 int \mbox{\hyperlink{class_paged_array_aea216f8a31b99a16c6dc5872d1fe5073}{count}}
 \item 
@@ -33,18 +39,42 @@ string \mbox{\hyperlink{class_paged_array_a17fb58713fb095c871dddfead9622b70}{lin
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_paged_array_a2dfcbe3d5a9d9c34826b11d79589fe33}\label{class_paged_array_a2dfcbe3d5a9d9c34826b11d79589fe33}} 
-\index{PagedArray@{PagedArray}!asig@{asig}}
-\index{asig@{asig}!PagedArray@{PagedArray}}
-\doxysubsubsection{\texorpdfstring{asig()}{asig()}}
-{\footnotesize\ttfamily void Paged\+Array\+::asig (\begin{DoxyParamCaption}\item[{int}]{arrrays\mbox{[}$\,$\mbox{]},  }\item[{int}]{i,  }\item[{int}]{x }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_paged_array_ab729c12f0824e782af8e96c00ff71eec}\label{class_paged_array_ab729c12f0824e782af8e96c00ff71eec}} 
+\index{PagedArray@{PagedArray}!asignPages@{asignPages}}
+\index{asignPages@{asignPages}!PagedArray@{PagedArray}}
+\doxysubsubsection{\texorpdfstring{asignPages()}{asignPages()}}
+{\footnotesize\ttfamily void Paged\+Array\+::asign\+Pages (\begin{DoxyParamCaption}\item[{int}]{saltar\+Lineas,  }\item[{int}]{array\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
 
+
+
+Guarda las paginas del archivo en arrays de tamaño 256. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+{\em array} & \\
+\hline
+{\em saltar\+Lineas} & \\
+\hline
+{\em array} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_paged_array_ad443f022316fd23de0367b012a2855ae}\label{class_paged_array_ad443f022316fd23de0367b012a2855ae}} 
 \index{PagedArray@{PagedArray}!operator\mbox{[}\mbox{]}@{operator[]}}
 \index{operator\mbox{[}\mbox{]}@{operator[]}!PagedArray@{PagedArray}}
 \doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
 {\footnotesize\ttfamily int \& Paged\+Array\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{position }\end{DoxyParamCaption})}
 
+
+
+Sobrecargar el operador \mbox{[}\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_paged_array_ab975c3cdad43c3d0dc1194b99968564c}\label{class_paged_array_ab975c3cdad43c3d0dc1194b99968564c}} 
 \index{PagedArray@{PagedArray}!rewrite\_file@{rewrite\_file}}
 \index{rewrite\_file@{rewrite\_file}!PagedArray@{PagedArray}}
@@ -52,19 +82,31 @@ string \mbox{\hyperlink{class_paged_array_a17fb58713fb095c871dddfead9622b70}{lin
 {\footnotesize\ttfamily void Paged\+Array\+::rewrite\+\_\+file (\begin{DoxyParamCaption}\item[{int}]{arr\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
 
 
+
+Rescribe la primera pagina del archivo. 
+
+
 \begin{DoxyParams}{Parameters}
+{\em arr} & \\
+\hline
 {\em arr} & Rescribe el archivo \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_paged_array_abe2739de96aab70aaba4576e250b8b5b}\label{class_paged_array_abe2739de96aab70aaba4576e250b8b5b}} 
-\index{PagedArray@{PagedArray}!store\_results@{store\_results}}
-\index{store\_results@{store\_results}!PagedArray@{PagedArray}}
-\doxysubsubsection{\texorpdfstring{store\_results()}{store\_results()}}
-{\footnotesize\ttfamily void Paged\+Array\+::store\+\_\+results (\begin{DoxyParamCaption}\item[{int}]{arr\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_paged_array_a113ff7a86164e96f4b646a8bbe0590e0}\label{class_paged_array_a113ff7a86164e96f4b646a8bbe0590e0}} 
+\index{PagedArray@{PagedArray}!rewriteFile@{rewriteFile}}
+\index{rewriteFile@{rewriteFile}!PagedArray@{PagedArray}}
+\doxysubsubsection{\texorpdfstring{rewriteFile()}{rewriteFile()}}
+{\footnotesize\ttfamily void Paged\+Array\+::rewrite\+File (\begin{DoxyParamCaption}\item[{int}]{arr\mbox{[}$\,$\mbox{]},  }\item[{int}]{saltarlinea }\end{DoxyParamCaption})}
+
+
+
+Rescribe el archivo, pero no para efectos del programa no funciona. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em arra} & \\
+{\em arr} & \\
+\hline
+{\em saltarlinea} & \\
 \hline
 \end{DoxyParams}
 
@@ -88,23 +130,41 @@ string \mbox{\hyperlink{class_paged_array_a17fb58713fb095c871dddfead9622b70}{lin
 \doxysubsubsection{\texorpdfstring{line}{line}}
 {\footnotesize\ttfamily string Paged\+Array\+::line}
 
-\mbox{\Hypertarget{class_paged_array_adb1d53abb2a369977c22897e47c6e06d}\label{class_paged_array_adb1d53abb2a369977c22897e47c6e06d}} 
-\index{PagedArray@{PagedArray}!pagefull@{pagefull}}
-\index{pagefull@{pagefull}!PagedArray@{PagedArray}}
-\doxysubsubsection{\texorpdfstring{pagefull}{pagefull}}
-{\footnotesize\ttfamily int Paged\+Array\+::pagefull\mbox{[}2\mbox{]}}
-
-\mbox{\Hypertarget{class_paged_array_a029bfc4804ba17b917317de22cccf0d8}\label{class_paged_array_a029bfc4804ba17b917317de22cccf0d8}} 
-\index{PagedArray@{PagedArray}!pages@{pages}}
-\index{pages@{pages}!PagedArray@{PagedArray}}
-\doxysubsubsection{\texorpdfstring{pages}{pages}}
-{\footnotesize\ttfamily int Paged\+Array\+::pages\mbox{[}10\mbox{]}}
+\mbox{\Hypertarget{class_paged_array_aef2c51aba623ea165944b982793c3b1a}\label{class_paged_array_aef2c51aba623ea165944b982793c3b1a}} 
+\index{PagedArray@{PagedArray}!pages0@{pages0}}
+\index{pages0@{pages0}!PagedArray@{PagedArray}}
+\doxysubsubsection{\texorpdfstring{pages0}{pages0}}
+{\footnotesize\ttfamily int Paged\+Array\+::pages0\mbox{[}10\mbox{]}}
 
 \mbox{\Hypertarget{class_paged_array_a3c14876d1a8258fcc3cfd5aba6295c58}\label{class_paged_array_a3c14876d1a8258fcc3cfd5aba6295c58}} 
 \index{PagedArray@{PagedArray}!pages1@{pages1}}
 \index{pages1@{pages1}!PagedArray@{PagedArray}}
 \doxysubsubsection{\texorpdfstring{pages1}{pages1}}
 {\footnotesize\ttfamily int Paged\+Array\+::pages1\mbox{[}10\mbox{]}}
+
+\mbox{\Hypertarget{class_paged_array_afe9e17d5b5b6b0d353b855feb9a237b2}\label{class_paged_array_afe9e17d5b5b6b0d353b855feb9a237b2}} 
+\index{PagedArray@{PagedArray}!pages2@{pages2}}
+\index{pages2@{pages2}!PagedArray@{PagedArray}}
+\doxysubsubsection{\texorpdfstring{pages2}{pages2}}
+{\footnotesize\ttfamily int Paged\+Array\+::pages2\mbox{[}10\mbox{]}}
+
+\mbox{\Hypertarget{class_paged_array_a50ba9514bf8fb69c83c37ec67bf40d00}\label{class_paged_array_a50ba9514bf8fb69c83c37ec67bf40d00}} 
+\index{PagedArray@{PagedArray}!pages3@{pages3}}
+\index{pages3@{pages3}!PagedArray@{PagedArray}}
+\doxysubsubsection{\texorpdfstring{pages3}{pages3}}
+{\footnotesize\ttfamily int Paged\+Array\+::pages3\mbox{[}10\mbox{]}}
+
+\mbox{\Hypertarget{class_paged_array_a3186292b28f51137b3fac3c071048018}\label{class_paged_array_a3186292b28f51137b3fac3c071048018}} 
+\index{PagedArray@{PagedArray}!pages4@{pages4}}
+\index{pages4@{pages4}!PagedArray@{PagedArray}}
+\doxysubsubsection{\texorpdfstring{pages4}{pages4}}
+{\footnotesize\ttfamily int Paged\+Array\+::pages4\mbox{[}10\mbox{]}}
+
+\mbox{\Hypertarget{class_paged_array_a2b132bf5751b258d5ed2dac22d7ba4d1}\label{class_paged_array_a2b132bf5751b258d5ed2dac22d7ba4d1}} 
+\index{PagedArray@{PagedArray}!pages5@{pages5}}
+\index{pages5@{pages5}!PagedArray@{PagedArray}}
+\doxysubsubsection{\texorpdfstring{pages5}{pages5}}
+{\footnotesize\ttfamily int Paged\+Array\+::pages5\mbox{[}10\mbox{]}}
 
 
 
